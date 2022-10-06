@@ -22,13 +22,13 @@ indexes = {"0": "\u2070",
            "9": "\u2079"
            }
 
-print("\n***Программа записи результата многочлена***")
+print("\n***Программа записи результата многочлена в файл***")
 
 k=int(input("Введите натуральную степень k: "))
 
 from random import randint
 def random(k):
-    a,b = 0, 10
+    a,b = 0, 100
     lst = [None] * (k+1)
     for i in range(k+1):
         lst[i] = randint(a,b)

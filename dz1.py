@@ -32,10 +32,3 @@ for i in range(natural_number):
         # print("natural_number", natural_number)
         # print("natural_number/BD_local[i]",s/BD_local[i])
 print(a)
-
-# print(load)
-# try:
-#     natural_number=int(input("\nВведите целое число: "))
-#     sum_randome(lit_length)
-# except:
-#     print("\nНужно вводить число!")

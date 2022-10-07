@@ -36,14 +36,17 @@ def unique_number(lst):
     return list_of_unique_numbers
 
 
+try:
+    list_length=int(input("Введите длиту последовательных числе: "))
+    ranger = input("Введите диапазон случайных числе через пробел: ").split()
 
-list_length=int(input("Введите длиту последовательных числе: "))
-ranger = input("Введите диапазон случайных числе через пробел: ").split()
+    a=random(list_length, ranger)
+    print(a)
+    b=sort(a)
+    # print(b)
+    unique_number(b)
+    print(unique_number(b))
+except:
+    print("\nНужно вводить число!")
 
-a=random(list_length, ranger)
-print(a)
-b=sort(a)
-# print(b)
-unique_number(b)
-print(unique_number(b))
 

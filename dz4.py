@@ -9,8 +9,9 @@ clear()
 print("\n*** Программа поиска НОК двух чисел ***")
 n=[]
 n=input("Введите два целых числа через пробел: ").split()
-
-print(n)
+A=n[0]
+B=n[1]
+# print(n)
 
 def prime_factors(num):
     i = 2 
@@ -26,58 +27,30 @@ def prime_factors(num):
     return sp
 
 a=prime_factors(int(n[0]))
-print(a)
-b=[]
+# print(a)
+
 b=prime_factors(int(n[1]))
-print(b)
+# print(b)
 
 def op(a, b):
-    # ints_list = a 
-    # temp = [] 
-    # while result!="":
-    #     for x in ints_list: 
-    #         if x not in temp: 
-    #             temp.append(x) 
-    #             ints_list = temp 
-    #             print(f'Updated List after removing duplicates = {temp}')
+    
+    for i in range(len(a)):
         result=list(set(a) & set(b))
-        print(result)
-        a.remove(result[0])
-        print(a)
-        return a
+        # print("result", result)
+        if not result:
+            a
+            # print("a", a)
+        else:
+            a.remove(result[0])
+
+    return a
 
 op(a,b)
-print(op(a,b))
+# print(op(a,b))
 
-v = a + b
-print(v)
+# print("a", a)
+v = op(a,b) + b
+# print(v)
 
 import functools
-print (functools.reduce(lambda a, b : a * b, v))
-
-
-# ints_list = a 
-# temp = [] 
-# for x in ints_list: 
-#     if x not in temp: 
-#         temp.append(x) 
-#         ints_list = temp 
-#         print(f'Updated List after removing duplicates = {temp}')
-
-# result=list(set(a) & set(b))
-# print(result)
-# a.remove(result[0])
-# print(a)
-
-# ints_list = a 
-# temp = [] 
-# for x in ints_list: 
-#     if x not in temp: 
-#         temp.append(x) 
-#         ints_list = temp 
-#         print(f'Updated List after removing duplicates = {temp}')
-
-# result=list(set(a) & set(b))
-# print(result)
-# a.remove(result[0])
-# print(a)
+print ("НОК для ", A, "и", B, "=>", functools.reduce(lambda a, b : a * b, v))

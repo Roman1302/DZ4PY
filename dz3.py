@@ -35,7 +35,7 @@ def random(k):
     return lst
 
 a=random(k)
-# print(a)
+print(a)
 
 def degree(k):
     c=[]
@@ -99,7 +99,7 @@ def save():
     with open('multinomial.json', 'w', encoding='utf-8') as fh:  # открываем файл на запись
         fh.write(json.dumps(my_lst_str,
                     ensure_ascii=False))  # преобразовываем словарь data в unicode-строку и записываем в файл
-    # print('БД успещно сохранена')
+    print('БД успещно сохранена')
 save()
 BDnew = load ()
 print(BDnew)
